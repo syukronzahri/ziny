@@ -80,5 +80,9 @@ if (file_exists(CONFIG_PATH . '/config.php')) {
 use Ziny as Ziny;
 use System\Exception;
 
-$application = new Ziny(REQUEST_URL, FULL_URL, RELATIVE_URL_PATH, SYSTEM_PATH, APPLICATION_PATH, BASE_FOLDER_NAME, RELATIVE_BASE_PATH, BASE_URL, $config);
-$application->run();
+try {
+    $application = new Ziny(REQUEST_URL, FULL_URL, RELATIVE_URL_PATH, SYSTEM_PATH, APPLICATION_PATH, BASE_FOLDER_NAME, RELATIVE_BASE_PATH, BASE_URL, $config);
+    $application->run();    
+} catch (Exception $e) {
+    echo $e->getMessage();
+}

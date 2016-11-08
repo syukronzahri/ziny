@@ -1,2 +1,2 @@
 # ziny
-Yet another tiny PHP MVC from Syukron (Z)ahri, that's why I call it (Z)iny
+Yet another tiny PHP MVC framework from Syukron (Z)ahri, It's called (Z)iny
